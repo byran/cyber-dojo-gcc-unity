@@ -1,0 +1,19 @@
+{
+  "display_name": "C (gcc), Unity",
+
+  "visible_filenames": [
+    "hiker.tests.c",
+    "hiker.c",
+    "hiker.h",
+    "makefile",
+    "cyber-dojo.sh"
+  ],
+
+  "hidden_filenames": [ ".*\\.gcov", ".*\\.gcno" ],
+
+  "image_name": "cyberdojofoundation/gcc_unity",
+
+  "filename_extension": [ ".c", ".h" ],
+
+  "runner_choice": "stateless"
+}
