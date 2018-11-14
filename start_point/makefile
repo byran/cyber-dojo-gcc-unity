@@ -4,7 +4,6 @@ CFLAGS += -Wall
 CFLAGS += -Wextra
 CFLAGS += -Werror
 CFLAGS += -Wshadow
-#CFLAGS += -Wfloat-equal
 CFLAGS += -O
 CFLAGS += -Wsequence-point
 CFLAGS += -Wmissing-noreturn
@@ -21,19 +20,11 @@ H_FILES = $(wildcard *.h)
 C_FILES = $(wildcard *.c)
 
 .PHONY: test.output
-#test.output: create.tests.main makefile test
 test.output: test makefile
 	./$<
 
-test: makefile $(C_FILES) $(H_FILES)
+test: makefile create.tests.main $(C_FILES) $(H_FILES)
 	@gcc $(CFLAGS) -O *.c $(UNITY_C_FILES) -o $@
 
 create.tests.main :
 	@ruby /unity/auto/generate_test_runner.rb hiker.tests.c tests.main.c
-
-#run.tests.output : makefile create.tests.main run.tests
-#	@./run.tests
-
-#run.tests : makefile *.c *.h
-#	@gcc $(CFLAGS) *.c /unity/src/unity.c -o run.tests
-

@@ -1,11 +1,7 @@
 #include "hiker.h"
+#include <unity.h>
 
-#include <stdio.h>
-
-int main()
+void test_Life_the_universe_and_everything(void)
 {
-	if(answer() == 42)
-		printf("\n%s\n", "OK");
-	else
-		printf("\n%s\n", "FAIL");
+    TEST_ASSERT_EQUAL(42, answer());
 }
