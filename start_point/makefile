@@ -21,7 +21,7 @@ C_FILES = $(wildcard *.c)
 
 .PHONY: test.output
 test.output: test makefile
-	./$<
+	@./$<
 
 test: makefile create.tests.main $(C_FILES) $(H_FILES)
 	@gcc $(CFLAGS) -O *.c $(UNITY_C_FILES) -o $@
