@@ -11,7 +11,6 @@ CFLAGS += -Wunreachable-code
 
 CFLAGS += -fprofile-arcs -ftest-coverage
 
-CFLAGS += -DTEST
 CFLAGS += -DUNITY_SUPPORT_64
 CFLAGS += -DUNITY_INCLUDE_DOUBLE
 
